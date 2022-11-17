@@ -1,0 +1,13 @@
+@use './colors';
+
+@media (min-width: 576px) and (max-width: 992px){
+ .header{
+    &__title{
+        font-size: 5rem;
+    }
+
+    &__icon{
+        font-size: 5rem;;
+    }
+ }   
+}

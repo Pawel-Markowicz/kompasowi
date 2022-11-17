@@ -1,0 +1,19 @@
+@use './colors';
+
+@media (max-width: 576px){
+
+ .header{ width: 200vw;
+
+    &__title{
+        font-size: 4rem;
+    }
+
+    &__icon{
+        font-size: 4rem;;
+    }
+
+    .white-blocks{
+        overflow-x: hidden;
+    }
+ }   
+}

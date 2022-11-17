@@ -1,0 +1,302 @@
+@use '../index/index.scss' as *;
+
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    position: relative;
+    font-size: 1.6rem;
+    font-family: $primary-font, Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100%;
+    z-index: -20;
+}
+
+.section-padding{
+    padding: 2em 3em;
+}
+.section-title{
+    padding: 2em 3em;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.wrapper{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.white-blocks{
+    display: flex;
+    position: absolute;
+    bottom: -25px;
+    z-index: 0;
+    overflow-x: hidden;
+  .square{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 25px 25px 25px;
+    border-color:  transparent $light transparent $light ;
+    z-index: 10;
+  }
+
+ 
+}
+
+
+.nav-desktop{
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45vw;
+    height: 10vh;
+    padding: .8em;
+    margin-left: auto;
+    background-color: $light;
+    font-size: 2rem;
+    text-transform: uppercase;
+    z-index: 100;
+    
+}
+
+.nav-desktop::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -7%;
+    display: block;
+    width: 40vw;
+    height: 100%;
+    background-color: $light;
+    transform: skewX(45deg);
+    z-index: 0;
+}
+
+
+.nav{
+
+    &__link{
+        position: relative;
+        padding-right: 0.3em;
+        
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: bold;
+        transition: .3s;
+        z-index: 0;
+    }
+
+    &__link::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: $primary-color;
+            z-index: -1;
+        
+    }
+
+
+    &__link:hover{
+        color: $light;
+    }
+
+    &__link:hover::after{
+        height: 100%;
+        transition: .3s;
+    }
+
+}
+
+
+
+
+.nav-hamburger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    font-size: 4rem;
+    text-transform: uppercase;
+    background-color: $light;
+    transform: translateX(102%);
+}
+
+
+.header{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../img/sea-1284368_640.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -5;
+
+    &__title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;        color: $primary-color;
+        z-index: 10;
+    }
+
+    &__icon{
+        padding-right: 0.2em;
+        color: $light;
+    }
+
+    &__shadow{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(45deg, #1745a280, #5f9cf76e);
+        z-index: -10;
+
+    }
+
+    &__logo-title{
+        position: fixed;
+        left: 2%;
+        top: 8%;
+        display: flex;
+        padding: 0.5em;
+        color: $primary-color;
+        font-size: 3rem;
+        text-decoration: none;
+    }
+
+    &__logo-icon{
+        height: 3rem;
+        width: 3rem;
+        margin-right: 0.2em;
+        color: $light;
+        transform-origin: 50% 50%;
+        animation: rotate 7s both linear infinite;
+
+    }
+
+    .fa-angle-down{
+        position: absolute;
+        bottom: 8%;
+        left: 45%;
+        font-size: 7rem;
+        color: $light;
+        animation: bounce 4s both linear infinite;
+    }
+}
+
+
+
+.aboutus{
+    position: relative;
+    height: 100%;
+    background-image: linear-gradient(45deg, #0c46bb, #6595dd);
+    z-index: -20;
+    overflow-x: hidden;
+
+    &__img{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+}
+
+
+@media (min-width: 1021px) and (max-width: 1303px){
+    .nav-desktop{
+        width: 60vw;
+    }
+}
+@media (min-width: 900px) and (max-width: 1021px){
+    .nav-desktop{
+        width: 70vw;
+    }
+}
+@media (min-width: 800px) and (max-width: 900px){
+    .nav-desktop{
+        width: 75vw;
+    }
+}
+@media (min-width: 600px) and (max-width: 800px){
+    .nav-desktop{
+        width: 80vw;
+    }
+}
+@media (max-width: 768px){
+    .header__logo-title{
+        display: none;
+    }
+
+    .nav-desktop{
+        display: none;
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    30%{
+        transform: rotate(30deg);
+    }
+    60%{
+        transform: rotate(-30deg);
+    }
+    90%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(15%);
+    }
+    60%{
+       transform: translateY(20%);
+    }
+    90%{
+       transform: translateY(25%);
+    }
+    100%{
+       transform: translateY(0);
+    }
+}
