@@ -17,3 +17,15 @@
     }
  }   
 }
+
+@media (min-width: 576px){
+    .aboutus{
+        &__img{
+            padding-bottom: 1em;
+        }
+
+        &__text{
+            padding-bottom: 1em;
+        }
+    }
+}
