@@ -101,7 +101,7 @@ body {
   font-family: "alefregular", Arial, Helvetica, sans-serif;
   width: 100vw;
   height: 100%;
-  z-index: -20;
+  z-index: 0;
 }
 
 .section-padding {
@@ -113,6 +113,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   font-size: 4rem;
+  color: #FFF7E9;
 }
 
 .wrapper {
@@ -125,8 +126,6 @@ body {
   display: flex;
   position: absolute;
   bottom: -25px;
-  z-index: 0;
-  overflow-x: hidden;
 }
 .white-blocks .square {
   width: 0;
@@ -134,7 +133,20 @@ body {
   border-style: solid;
   border-width: 25px 25px 25px 25px;
   border-color: transparent #FFF7E9 transparent #FFF7E9;
-  z-index: 10;
+}
+
+.white-blocks-up {
+  display: flex;
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+.white-blocks-up .square {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 25px 25px 25px;
+  border-color: transparent #FFF7E9 transparent #FFF7E9;
 }
 
 .nav-desktop {
@@ -221,7 +233,7 @@ body {
   background-image: url("../../img/sea-1284368_640.jpg");
   background-size: cover;
   background-position: center;
-  z-index: -5;
+  z-index: 0;
 }
 .header__title {
   display: flex;
@@ -242,7 +254,7 @@ body {
   height: 100%;
   width: 100%;
   background-image: linear-gradient(45deg, rgba(23, 69, 162, 0.5019607843), rgba(95, 156, 247, 0.431372549));
-  z-index: -10;
+  z-index: -1;
 }
 .header__logo-title {
   position: fixed;
@@ -253,6 +265,7 @@ body {
   color: #FF731D;
   font-size: 3rem;
   text-decoration: none;
+  z-index: 10;
 }
 .header__logo-icon {
   height: 3rem;
@@ -277,8 +290,6 @@ body {
   position: relative;
   height: 100%;
   background-image: linear-gradient(45deg, #0c46bb, #6595dd);
-  z-index: -20;
-  overflow-x: hidden;
 }
 .aboutus .section-title {
   color: #FFF7E9;
@@ -299,6 +310,16 @@ body {
 }
 .aboutus__text :nth-child(2) {
   padding-bottom: 1em;
+}
+.aboutus__text-two :nth-child(3) {
+  padding-bottom: 5em;
+}
+
+.africa {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0c46bb;
 }
 
 @media (min-width: 1021px) and (max-width: 1303px) {
