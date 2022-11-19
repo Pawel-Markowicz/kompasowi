@@ -1,7 +1,16 @@
 @use './colors';
 
+@media (min-width: 768px){
+    .header{
+        &__button{
+            display: none;
+        }
+    }
+}
+
 @media (min-width: 576px) and (max-width: 992px){
  .header{
+
     &__title{
         font-size: 5rem;
     }
@@ -10,4 +19,31 @@
         font-size: 5rem;;
     }
  }   
+
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    .africa{
+        &__box{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 1em;
+        }
+
+        &__head{
+            padding-top: 0;
+        }
+    
+        &__img{
+            grid-column: 1/2;
+            padding-right: 1.3em;
+        }
+    
+        &__text{
+            grid-column: 2/3;
+        }
+    
+       
+    
+     }
 }

@@ -16,6 +16,17 @@
   font-weight: 400;
   font-style: normal;
 }
+@media (min-width: 0) and (max-width: 992px) {
+  .header {
+    background-image: url("../../img/sea-1284368_640.jpg");
+  }
+  .africa {
+    background-image: linear-gradient(45deg, rgba(247, 227, 2, 0.397), rgba(219, 255, 15, 0.616)), url("../../img/africa/antelope-4121962_640.jpg");
+  }
+  .africa__head {
+    padding-top: 0.8em;
+  }
+}
 @media (max-width: 576px) {
   .header {
     width: 200vw;
@@ -38,6 +49,11 @@
     padding-bottom: 1em;
   }
 }
+@media (min-width: 768px) {
+  .header__button {
+    display: none;
+  }
+}
 @media (min-width: 576px) and (max-width: 992px) {
   .header__title {
     font-size: 5rem;
@@ -46,7 +62,30 @@
     font-size: 5rem;
   }
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .africa__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+  }
+  .africa__head {
+    padding-top: 0;
+  }
+  .africa__img {
+    grid-column: 1/2;
+    padding-right: 1.3em;
+  }
+  .africa__text {
+    grid-column: 2/3;
+  }
+}
 @media (min-width: 992px) {
+  .header {
+    background-image: url("../../img/sea-1284368_1920.jpg");
+  }
+  .header__button {
+    display: none;
+  }
   .header__title {
     font-size: 7rem;
   }
@@ -78,7 +117,32 @@
   .aboutus__text-two {
     grid-column: 1/2;
     grid-row: 1/2;
-    text-align: right;
+    text-align: left;
+  }
+  .africa {
+    background-image: linear-gradient(45deg, rgba(247, 227, 2, 0.397), rgba(219, 255, 15, 0.616)), url("../../img/africa/antelope-4121962_1920.jpg");
+  }
+  .africa__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+  }
+  .africa__head {
+    padding-top: 0;
+  }
+  .africa__img {
+    grid-column: 1/2;
+    padding-right: 1.3em;
+  }
+  .africa__text {
+    grid-column: 2/3;
+  }
+  .africa__img-two {
+    grid-row: 1;
+    grid-column: 2/3;
+  }
+  .africa__text-two {
+    grid-column: 1/2;
   }
 }
 *,
@@ -104,8 +168,14 @@ body {
   z-index: 0;
 }
 
+img {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .section-padding {
-  padding: 2em 3em;
+  padding: 2em 2em 7em 2em;
 }
 
 .section-title {
@@ -230,10 +300,19 @@ body {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url("../../img/sea-1284368_640.jpg");
   background-size: cover;
   background-position: center;
   z-index: 0;
+}
+.header__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.header__hamburger {
+  padding: 0.7em;
+  color: #FFF7E9;
+  font-size: 4rem;
 }
 .header__title {
   display: flex;
@@ -318,8 +397,22 @@ body {
 .africa {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  background-color: #0c46bb;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #1746A2;
+}
+.africa__head {
+  color: #FF731D;
+  font-size: 3rem;
+  font-family: "alefbold";
+}
+.africa__body {
+  padding-bottom: 1em;
+}
+.africa__text:last-child {
+  padding-bottom: 2em;
 }
 
 @media (min-width: 1021px) and (max-width: 1303px) {

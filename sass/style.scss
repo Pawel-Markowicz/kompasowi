@@ -1,4 +1,4 @@
-@use '../index/index.scss' as *;
+@use '../sass/index/index.scss' as *;
 
 *,
 ::before,
@@ -23,10 +23,17 @@ body{
     z-index: 0;
 }
 
+img{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 
 .section-padding{
-    padding: 2em 3em;
+    padding: 2em 2em 7em 2em;
 }
+
 .section-title{
     padding: 2em 3em;
     text-transform: uppercase;
@@ -115,7 +122,6 @@ body{
     &__link{
         position: relative;
         padding-right: 0.3em;
-        
         text-decoration: none;
         color: $primary-color;
         font-weight: bold;
@@ -173,17 +179,29 @@ body{
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url('../../img/sea-1284368_640.jpg');
     background-size: cover;
     background-position: center;
     z-index: 0;
 
+    &__button{
+     
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__hamburger{
+        padding: .7em;
+        color: $light;
+        font-size: 4rem;
+    }
 
     &__title{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 90vh;        color: $primary-color;
+        height: 90vh;        
+        color: $primary-color;
         z-index: 10;
     }
 
@@ -199,7 +217,7 @@ body{
         height: 100%;
         width: 100%;
         background-image: linear-gradient(45deg, #1745a280, #5f9cf76e);
-      z-index: -1;
+        z-index: -1;
 
     }
 
@@ -250,7 +268,6 @@ body{
         color: $light;
     }
 
-
     &__img{
         display: block;
         width: 100%;
@@ -278,15 +295,33 @@ body{
 .africa{
     position: relative;
     width: 100vw;
-    height: 100vh;
-    background-color: #0c46bb;
-   
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: $dark-blue;
+
+    &__head{
+        
+        color: $primary-color;
+        font-size: 3rem;
+        font-family: $bold-font;
+    }
+
+    &__body{
+        padding-bottom: 1em;
+        
+    }
+
+    &__text:last-child{
+            padding-bottom: 2em;
+    }
+
+
 
 }
 
 
-
-// MENU MEDIA QUERIES
 
 @media (min-width: 1021px) and (max-width: 1303px){
     .nav-desktop{
