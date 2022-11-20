@@ -16,15 +16,29 @@
   font-weight: 400;
   font-style: normal;
 }
+@media (min-width: 0) and (max-width: 768px) {
+  br {
+    display: block;
+  }
+  .nav-hamburger {
+    transform: translateX(-102%);
+  }
+}
 @media (min-width: 0) and (max-width: 992px) {
+  .hamburger {
+    display: block;
+  }
   .header {
     background-image: url("../../img/sea-1284368_640.jpg");
   }
   .africa {
-    background-image: linear-gradient(45deg, rgba(247, 227, 2, 0.397), rgba(219, 255, 15, 0.616)), url("../../img/africa/antelope-4121962_640.jpg");
+    background-image: linear-gradient(45deg, rgba(170, 137, 7, 0.596), rgba(167, 196, 2, 0.727)), url("../../img/africa/antelope-4121962_640.jpg");
   }
   .africa__head {
     padding-top: 0.8em;
+  }
+  .america {
+    background-image: linear-gradient(45deg, rgba(3, 90, 7, 0.581), rgba(10, 166, 10, 0.389)), url("../../img/south-america/beach-778246_640.jpg");
   }
 }
 @media (max-width: 576px) {
@@ -50,7 +64,10 @@
   }
 }
 @media (min-width: 768px) {
-  .header__button {
+  .hamburger {
+    display: none;
+  }
+  br {
     display: none;
   }
 }
@@ -78,13 +95,14 @@
   .africa__text {
     grid-column: 2/3;
   }
+  .africa__info {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
 }
 @media (min-width: 992px) {
   .header {
     background-image: url("../../img/sea-1284368_1920.jpg");
-  }
-  .header__button {
-    display: none;
   }
   .header__title {
     font-size: 7rem;
@@ -120,7 +138,7 @@
     text-align: left;
   }
   .africa {
-    background-image: linear-gradient(45deg, rgba(247, 227, 2, 0.397), rgba(219, 255, 15, 0.616)), url("../../img/africa/antelope-4121962_1920.jpg");
+    background-image: linear-gradient(45deg, rgba(170, 137, 7, 0.596), rgba(167, 196, 2, 0.727)), url("../../img/africa/antelope-4121962_1920.jpg");
   }
   .africa__box {
     display: grid;
@@ -138,10 +156,19 @@
     grid-column: 2/3;
   }
   .africa__img-two {
+    padding-left: 1.3em;
     grid-row: 1;
     grid-column: 2/3;
   }
   .africa__text-two {
     grid-column: 1/2;
+    text-align: right;
+  }
+  .africa__info {
+    -moz-column-count: 3;
+         column-count: 3;
+  }
+  .america {
+    background-image: linear-gradient(45deg, rgba(3, 90, 7, 0.581), rgba(10, 166, 10, 0.389)), url("../../img/south-america/beach-778246_640.jpg");
   }
 }/*# sourceMappingURL=index.css.map */

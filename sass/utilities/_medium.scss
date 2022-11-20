@@ -1,11 +1,15 @@
 @use './colors';
 
 @media (min-width: 768px){
-    .header{
-        &__button{
-            display: none;
-        }
+
+    .hamburger{
+        display: none;
     }
+
+    br{
+        display: none;
+    }
+
 }
 
 @media (min-width: 576px) and (max-width: 992px){
@@ -43,6 +47,11 @@
             grid-column: 2/3;
         }
     
+
+        &__info{
+            column-count: 2;
+
+        }
        
     
      }

@@ -1,12 +1,12 @@
 @use './colors' as *;
 
 @media (min-width: 992px){
+
+   
  .header{
     background-image: url('../../img/sea-1284368_1920.jpg');
 
-    &__button{
-        display: none;
-    }
+   
     
     &__title{
         font-size: 7rem;
@@ -56,7 +56,7 @@
  }
 
 .africa{
-    background-image: linear-gradient(45deg, rgba(247, 227, 2, 0.397), rgba(219, 255, 15, 0.616)), url('../../img/africa/antelope-4121962_1920.jpg');
+    background-image: linear-gradient(45deg, rgba(170, 137, 7, 0.596), rgba(167, 196, 2, 0.727)), url('../../img/africa/antelope-4121962_1920.jpg');
 
 
     &__box{
@@ -79,15 +79,27 @@
     }
 
     &__img-two{
+        padding-left: 1.3em;
         grid-row: 1;
         grid-column: 2/3;
     }
 
     &__text-two{
+        
         grid-column: 1/2;
+        text-align: right;
     }
+
+    &__info{
+        column-count: 3;
+        
+      }
 }
 
 
+
+.america{
+    background-image: linear-gradient(45deg, rgba(3, 90, 7, 0.581), rgba(10, 166, 10, 0.389)) ,url('../../img/south-america/beach-778246_640.jpg');
+}
 
 }
