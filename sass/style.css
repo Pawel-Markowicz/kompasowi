@@ -22,7 +22,7 @@
     display: block;
   }
   .africa {
-    background-image: url("../../img/africa/antelope-4121962_1920.jpg");
+    background-image: linear-gradient(45deg, rgba(90, 62, 3, 0.581), rgba(163, 166, 10, 0.389)), url("../img/africa/antelope-4121962_640.jpg");
   }
   .africa__head {
     padding-top: 0.8em;
@@ -142,8 +142,7 @@
     text-align: left;
   }
   .africa {
-    height: 100vh;
-    background-image: linear-gradient(45deg, rgba(170, 137, 7, 0.596), rgba(167, 196, 2, 0.727)), url("../../img/africa/antelope-4121962_1920.jpg");
+    background-image: linear-gradient(45deg, rgba(245, 171, 13, 0.581), rgba(163, 166, 10, 0.389)), url("../../img/africa/antelope-4121962_640.jpg");
   }
   .africa__box {
     display: grid;
@@ -218,13 +217,13 @@ body {
   font-family: "Montserrat", sans-serif;
   width: 100vw;
   height: 100%;
-  z-index: 0;
 }
 
 .background {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h2 {

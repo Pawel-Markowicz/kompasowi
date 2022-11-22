@@ -2,8 +2,6 @@
 @use '../utilities/fonts' as *;
 
 @media (min-width: 992px){
-
-   
  .header{
     
     &__background-large{
@@ -63,9 +61,8 @@
  }
 
 .africa{
-    height: 100vh;
-    background-image: linear-gradient(45deg, rgba(170, 137, 7, 0.596), rgba(167, 196, 2, 0.727)), url('../../img/africa/antelope-4121962_1920.jpg');
-
+    
+    background-image: linear-gradient(45deg, rgba(245, 171, 13, 0.581), rgba(163, 166, 10, 0.389)), url('../../img/africa/antelope-4121962_640.jpg');
 
     &__box{
         display: grid;

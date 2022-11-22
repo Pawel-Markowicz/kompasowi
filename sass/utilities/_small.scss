@@ -39,7 +39,8 @@
     
 
     .africa{
-        background-image: url('../../img/africa/antelope-4121962_1920.jpg') ;
+        background-image: linear-gradient(45deg, rgba(90, 62, 3, 0.581), rgba(163, 166, 10, 0.389)), url('../img/africa/antelope-4121962_640.jpg');
+
         &__head{
             padding-top: .8em;
         }
