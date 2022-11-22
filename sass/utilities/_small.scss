@@ -1,4 +1,5 @@
 @use './colors';
+@use '../utilities/fonts' as *;
 
 @media (min-width: 0){
     .nav-hamburger{

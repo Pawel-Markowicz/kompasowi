@@ -1,5 +1,8 @@
 @use '../sass/index/index.scss' as *;
 
+$logo-font: 'Pacifico', cursive;
+$primary-font:  'Montserrat', sans-serif;
+
 *,
 ::before,
 ::after{
@@ -17,7 +20,7 @@ html{
 body{
     position: relative;
     font-size: 1.6rem;
-    font-family: $primary-font, Arial, Helvetica, sans-serif;
+    font-family: $primary-font;
     width: 100vw;
     height: 100%;
     z-index: 0;
@@ -26,6 +29,11 @@ body{
 .background{
     height: 100%;
     object-fit: cover;
+}
+
+h2{
+    font-family: $primary-font;
+    font-weight: normal;
 }
 
 img{
@@ -133,13 +141,14 @@ img{
 
 
 .nav{
+    font-family: $primary-font;
+
 
     &__link{
         position: relative;
         padding-right: 0.3em;
         text-decoration: none;
         color: $primary-color;
-        font-weight: bold;
         transition: .3s;
         z-index: 0;
     }
@@ -211,6 +220,7 @@ img{
         justify-content: center;
         align-items: center;        
         color: $primary-color;
+        font-family: $logo-font;
         transform: translate(-50%, -50%);
         z-index: 20;
     }
@@ -233,17 +243,21 @@ img{
 
     &__logo-title{
         position: fixed;
-        left: 2%;
+        left: 4%;
         top: 8%;
         display: flex;
         padding: 0.5em;
         color: $primary-color;
+        font-family: $logo-font;
         font-size: 3rem;
         text-decoration: none;
         z-index: 10;
     }
 
     &__logo-icon{
+        position: absolute;
+        left: -12%;
+        top: 30%;
         height: 3rem;
         width: 3rem;
         margin-right: 0.2em;
@@ -305,13 +319,12 @@ img{
 
 .africa{
     position: relative;
-    
-
     &__head{
         padding-top:  0.5em;
         color: $dark-blue;
         font-size: 3rem;
-        font-family: $bold-font;
+        font-family: $primary-font;
+        font-weight: normal;
     }
 
     &__body{
@@ -343,6 +356,8 @@ img{
         h3{
             padding-top: 0.9em;
             color: $dark-blue;
+            font-family: $primary-font;
+            font-weight: normal;
         }
 
         p{
