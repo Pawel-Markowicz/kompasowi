@@ -11,6 +11,11 @@
         display: none;
     }
 
+    .gallery{
+        &__box{
+            grid-template-columns: 1fr 1fr;
+           }
+    }
 }
 
 @media (min-width: 576px) and (max-width: 992px){
