@@ -282,7 +282,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(100%);
+    transform: translateX(332%);
   }
 }
 @keyframes cloud-right {
@@ -290,7 +290,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(100%);
+    transform: translateX(332%);
   }
 }
 @-webkit-keyframes rotate {
@@ -687,8 +687,8 @@ img {
 .america__clouds {
   position: relative;
   right: -200%;
-  -webkit-animation: cloud-left 32s both linear infinite;
-          animation: cloud-left 32s both linear infinite;
+  -webkit-animation: cloud-left 42s both linear infinite;
+          animation: cloud-left 42s both linear infinite;
 }
 .america .cloud-up {
   font-size: 10rem;
@@ -701,9 +701,10 @@ img {
 .america .cloud-down {
   position: relative;
   top: 170%;
+  left: -240%;
   font-size: 10rem;
-  -webkit-animation: cloud-right 22s linear both infinite;
-          animation: cloud-right 22s linear both infinite;
+  -webkit-animation: cloud-right 42s linear both infinite;
+          animation: cloud-right 42s linear both infinite;
 }
 
 .gallery {

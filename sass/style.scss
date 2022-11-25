@@ -18,7 +18,7 @@ $primary-font:  'Montserrat', sans-serif;
     }
 
     to{
-        transform: translateX(100%);
+        transform: translateX(332%);
     }
 }
 
@@ -439,8 +439,8 @@ img{
 
     &__clouds{
        position: relative;
-        right: -200%;
-        animation: cloud-left 32s both linear infinite;
+         right: -200%;
+        animation: cloud-left 42s both linear infinite;
         
     }
 
@@ -457,9 +457,9 @@ img{
     .cloud-down{
         position: relative;
         top: 170%;
-    
+        left: -240%;
         font-size: 10rem;
-        animation: cloud-right 22s linear both infinite;
+        animation: cloud-right 42s linear both infinite;
     }
 }
 
