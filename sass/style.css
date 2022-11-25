@@ -10,6 +10,12 @@
   .america__info p {
     padding-top: 1em;
   }
+  .asia h3 {
+    padding-top: 1em;
+  }
+  .asia__box-text:last-child {
+    padding-bottom: 2em;
+  }
   .gallery__box {
     grid-template-columns: 1fr;
   }
@@ -36,6 +42,24 @@
   .america {
     background-image: linear-gradient(45deg, rgba(3, 90, 7, 0.581), rgba(10, 166, 10, 0.389)), url("../../img/south-america/beach-778246_640.jpg");
   }
+  .america__box {
+    padding: 2em;
+  }
+  .america__box-one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .america__box-two {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .america__box-three {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .asia {
+    background-image: linear-gradient(45deg, rgba(161, 6, 52, 0.581), rgba(135, 10, 166, 0.389)), url("../../img/asia/asia-640.jpg");
+  }
 }
 @media (max-width: 576px) {
   .header {
@@ -49,6 +73,10 @@
   }
   .header .white-blocks {
     overflow-x: hidden;
+  }
+  .asia__box {
+    padding-top: 1em;
+    padding-left: 1em;
   }
 }
 @media (min-width: 576px) {
@@ -66,8 +94,25 @@
   br {
     display: none;
   }
+  .asia__container {
+    grid-template-columns: 1fr 1fr;
+  }
   .gallery__box {
     grid-template-columns: 1fr 1fr;
+  }
+  .asia__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2em;
+  }
+  .asia__box h3 {
+    padding-bottom: 1em;
+  }
+  .asia__box p {
+    padding-bottom: 0.53em;
+  }
+  .asia__box-text {
+    padding-left: 0.8em;
   }
 }
 @media (min-width: 576px) and (max-width: 992px) {
@@ -203,10 +248,14 @@
   .america__box-three {
     grid-row: 3/4;
     grid-column: 3/4;
+    padding-right: 1em;
   }
   .america__info {
     -moz-column-count: 3;
          column-count: 3;
+  }
+  .asia {
+    background-image: linear-gradient(45deg, rgba(161, 6, 52, 0.581), rgba(135, 10, 166, 0.389)), url("../../img/asia/asia-1920.jpg");
   }
   .gallery__box {
     grid-template-columns: repeat(3, 1fr);
@@ -381,12 +430,6 @@ img {
   font-size: 4rem;
   font-weight: bold;
   color: #FFF7E9;
-}
-
-.wrapper {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .white-blocks {
@@ -577,8 +620,8 @@ img {
   padding-bottom: 5em;
 }
 
-.africa__box, .america__box {
-  padding: 3em;
+.africa__box, .aboutus__box {
+  padding: 1em;
 }
 
 .africa {
@@ -607,6 +650,7 @@ img {
 
 .america__container {
   position: relative;
+  padding: 7em;
   width: 100vw;
   z-index: 0;
 }
@@ -615,7 +659,7 @@ img {
 }
 .america__box h3 {
   padding-top: 0.9em;
-  color: #1746A2;
+  color: #FF731D;
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
 }
@@ -713,6 +757,25 @@ img {
 }
 .gallery__img {
   padding: 2em;
+}
+
+.asia {
+  position: relative;
+  color: #FFF7E9;
+  z-index: 0;
+}
+.asia h3 {
+  color: #5F9DF7;
+}
+
+.contact {
+  background-image: linear-gradient(45deg, rgb(197, 197, 24), rgba(255, 251, 0, 0.589));
+  height: 100%;
+  color: black;
+}
+.contact h2 {
+  z-index: 1000;
+  color: black;
 }
 
 @media (min-width: 1021px) and (max-width: 1303px) {

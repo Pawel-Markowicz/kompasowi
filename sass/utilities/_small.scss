@@ -20,6 +20,15 @@
         }
     }
 
+.asia{
+   h3{
+    padding-top: 1em;
+   }
+
+    &__box-text:last-child{
+        padding-bottom: 2em;
+    }
+}
 
     .gallery{
        &__box{
@@ -58,7 +67,31 @@
 
     .america{
         background-image: linear-gradient(45deg, rgba(3, 90, 7, 0.581), rgba(10, 166, 10, 0.389)) ,url('../../img/south-america/beach-778246_640.jpg');
+
+
+        &__box{
+            padding: 2em;
+        }
+        &__box-one{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        &__box-two{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        &__box-three{    
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
     }
+    .asia{
+        background-image: linear-gradient(45deg, rgba(161, 6, 52, 0.581), rgba(135, 10, 166, 0.389)) ,url('../../img/asia/asia-640.jpg');
+
+       
+    }
+
+
 }
 
 
@@ -81,6 +114,13 @@
         overflow-x: hidden;
     }
  }   
+
+ .asia{
+    &__box{
+        padding-top: 1em;
+        padding-left: 1em;
+    }
+ }
 }
 
 
@@ -95,5 +135,8 @@
             padding-bottom: 1em;
         }
     }
+
+
     
 }
+

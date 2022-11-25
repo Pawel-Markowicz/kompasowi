@@ -125,11 +125,17 @@
     &__box-three{
         grid-row: 3/4;
         grid-column: 3/4;
+        padding-right: 1em;
     }
 
     &__info{
         column-count: 3;
      }
+}
+
+.asia{
+    background-image: linear-gradient(45deg, rgba(161, 6, 52, 0.581), rgba(135, 10, 166, 0.389)) ,url('../../img/asia/asia-1920.jpg');
+
 }
 
 .gallery{

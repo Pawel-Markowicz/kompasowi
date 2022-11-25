@@ -11,11 +11,42 @@
         display: none;
     }
 
+    .asia{
+        &__container{
+            grid-template-columns: 1fr 1fr; 
+        }
+
+    }
+
     .gallery{
         &__box{
             grid-template-columns: 1fr 1fr;
            }
     }
+
+    .asia{
+        &__box{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         padding: 2em;
+            
+         h3{
+            padding-bottom: 1em;
+         }
+
+         p{
+            padding-bottom: 0.53em;
+         }
+         
+        }
+ 
+        &__box-text{
+         padding-left: .8em;
+         
+        }
+
+     
+     }
 }
 
 @media (min-width: 576px) and (max-width: 992px){
@@ -76,6 +107,10 @@
             column-count: 2;
          }
     }
+
+
+     
+
      }
 
     
