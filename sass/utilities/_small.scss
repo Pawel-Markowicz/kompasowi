@@ -36,6 +36,18 @@
        }
     }
 
+
+    .contact{
+        &__container{
+            .sub{
+
+                .submit{
+                    width: 40vw;
+                }
+            }
+           
+        }
+    }
 }
 
 @media (min-width: 0) and (max-width: 992px){
@@ -66,7 +78,7 @@
     }
 
     .america{
-        background-image: linear-gradient(45deg, rgba(3, 90, 7, 0.581), rgba(10, 166, 10, 0.389)) ,url('../../img/south-america/beach-778246_640.jpg');
+        background-image: linear-gradient(45deg, rgba(3, 90, 7, 0.581), rgba(10, 166, 10, 0.389)) ,url('../img/south-america/beach-778246_640.jpg');
 
 
         &__box{
@@ -86,13 +98,24 @@
         }
     }
     .asia{
-        background-image: linear-gradient(45deg, rgba(161, 6, 52, 0.581), rgba(135, 10, 166, 0.389)) ,url('../../img/asia/asia-640.jpg');
+        background-image: linear-gradient(45deg, rgba(161, 6, 52, 0.581), rgba(135, 10, 166, 0.389)) ,url('../img/asia/asia-640.jpg');
 
        
     }
 
+   .gallery{
+    &__links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200vh;
+    }
+   }
+
 
 }
+
 
 
 

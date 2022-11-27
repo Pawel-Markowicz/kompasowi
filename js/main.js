@@ -1,6 +1,7 @@
 const nav = document.querySelector('.nav-hamburger');
 const hamburger = document.querySelector('.hamburger');
 const menuItems = document.querySelectorAll('.nav__link');
+const footerYear = document.querySelector('.footer__year');
 
 const handleNav = () => {
     nav.classList.toggle('nav-active');
@@ -12,5 +13,12 @@ const handleNav = () => {
     })
 }
 
+const handleYear = () => {
+    const year = (new Date).getFullYear();
+    footerYear.innerText = year;
+}
+
+
 
 hamburger.addEventListener('click', handleNav);
+handleYear ();

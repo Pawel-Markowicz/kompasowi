@@ -466,12 +466,14 @@ img{
 .gallery{
     position: relative;
     height: 100%;
-    background-image: linear-gradient(45deg, $primary-color, $dark-blue);
+    background-image: linear-gradient(45deg, $dark-blue, $light-blue);
 
 
     
     h2{
+        padding-right: 1.2em;
         font-weight: bold;
+        text-align: center;
     }
 
     h3{
@@ -480,15 +482,12 @@ img{
 
     &__links{
         position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        height: 20vh;
-        width: 50vw;
+        height: 50vh;
+        width: 100vw;
         text-transform: uppercase;
         font-size: 3rem;
         font-weight: bold;
+        text-align: center;
 
       
 
@@ -502,6 +501,7 @@ img{
 
     &__link{
         position: relative;
+    padding: 0.2em;
     }
 
     &__link::before{
@@ -548,10 +548,90 @@ img{
     background-image: linear-gradient(45deg, rgb(197, 197, 24), rgba(255, 251, 0, 0.589));
     height: 100%;
     color: black;
+    padding-bottom: 5em;
 
     h2{
         z-index: 1000;
         color: black;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .name, .message, .email{
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        text-transform: uppercase;
+    }
+
+
+    label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0.5em;
+        font-size: 2rem;
+    }
+
+    textarea{
+        min-width: 100%;
+        max-width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .submit{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: .5em;
+        font-size: 2rem;
+        font-family: $primary-font;
+        color: $light;
+        border: none;
+        border-radius: 8px;
+        background-image: linear-gradient(45deg, $light-blue, $dark-blue);
+        text-transform: uppercase;
+        cursor: pointer;
+        overflow: hidden;
+
+    }
+
+    .submit::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 20vw;
+        height: 20vw;
+        border: 1px rgba(255, 255, 255, 0.452) solid;
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.737), rgba(255, 255, 255, 0.31));
+        transform: rotate(20deg);
+        transition: transform .3s;
+    }
+
+    .submit:hover::before{
+        transform: translateX(400%);
+    }
+   
+}
+
+.footer{
+
+    &__bottom-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5em;
+        background-color: $light;
+        color: $primary-color;
+        text-transform: uppercase;
     }
 }
 

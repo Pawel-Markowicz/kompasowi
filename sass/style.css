@@ -19,6 +19,9 @@
   .gallery__box {
     grid-template-columns: 1fr;
   }
+  .contact__container .sub .submit {
+    width: 40vw;
+  }
 }
 @media (min-width: 0) and (max-width: 992px) {
   .header {
@@ -40,7 +43,7 @@
     padding-top: 0.8em;
   }
   .america {
-    background-image: linear-gradient(45deg, rgba(3, 90, 7, 0.581), rgba(10, 166, 10, 0.389)), url("../../img/south-america/beach-778246_640.jpg");
+    background-image: linear-gradient(45deg, rgba(3, 90, 7, 0.581), rgba(10, 166, 10, 0.389)), url("../img/south-america/beach-778246_640.jpg");
   }
   .america__box {
     padding: 2em;
@@ -58,7 +61,14 @@
     grid-row: 1/2;
   }
   .asia {
-    background-image: linear-gradient(45deg, rgba(161, 6, 52, 0.581), rgba(135, 10, 166, 0.389)), url("../../img/asia/asia-640.jpg");
+    background-image: linear-gradient(45deg, rgba(161, 6, 52, 0.581), rgba(135, 10, 166, 0.389)), url("../img/asia/asia-640.jpg");
+  }
+  .gallery__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
   }
 }
 @media (max-width: 576px) {
@@ -157,7 +167,7 @@
 }
 @media (min-width: 992px) {
   .header {
-    background-image: linear-gradient(45deg, rgba(23, 69, 162, 0.5019607843), rgba(95, 156, 247, 0.431372549)), url("../../img/sea-1284368_1920.jpg");
+    background-image: linear-gradient(45deg, rgba(23, 69, 162, 0.5019607843), rgba(95, 156, 247, 0.431372549)), url("../img/sea-1284368_1920.jpg");
   }
   .header__background-large {
     display: block;
@@ -199,7 +209,7 @@
     text-align: left;
   }
   .africa {
-    background-image: linear-gradient(45deg, rgba(245, 171, 13, 0.581), rgba(163, 166, 10, 0.389)), url("../../img/africa/antelope-4121962_1920.jpg");
+    background-image: linear-gradient(45deg, rgba(245, 171, 13, 0.581), rgba(163, 166, 10, 0.389)), url("../img/africa/antelope-4121962_1920.jpg");
   }
   .africa__box {
     display: grid;
@@ -230,7 +240,7 @@
          column-count: 3;
   }
   .america {
-    background-image: linear-gradient(45deg, rgba(3, 90, 7, 0.581), rgba(10, 166, 10, 0.389)), url("../../img/south-america/beach-778246_1920.jpg");
+    background-image: linear-gradient(45deg, rgba(3, 90, 7, 0.581), rgba(10, 166, 10, 0.389)), url("../img/south-america/beach-778246_1920.jpg");
   }
   .america__container {
     display: grid;
@@ -255,7 +265,16 @@
          column-count: 3;
   }
   .asia {
-    background-image: linear-gradient(45deg, rgba(161, 6, 52, 0.581), rgba(135, 10, 166, 0.389)), url("../../img/asia/asia-1920.jpg");
+    background-image: linear-gradient(45deg, rgba(161, 6, 52, 0.581), rgba(135, 10, 166, 0.389)), url("../img/asia/asia-1920.jpg");
+  }
+  .gallery__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery__link {
+    padding: 1em;
+    margin: 2em;
   }
   .gallery__box {
     grid-template-columns: repeat(3, 1fr);
@@ -710,25 +729,24 @@ img {
 .gallery {
   position: relative;
   height: 100%;
-  background-image: linear-gradient(45deg, #FF731D, #1746A2);
+  background-image: linear-gradient(45deg, #1746A2, #5F9DF7);
 }
 .gallery h2 {
+  padding-right: 1.2em;
   font-weight: bold;
+  text-align: center;
 }
 .gallery h3 {
   padding-top: 5em;
 }
 .gallery__links {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  height: 20vh;
-  width: 50vw;
+  height: 50vh;
+  width: 100vw;
   text-transform: uppercase;
   font-size: 3rem;
   font-weight: bold;
+  text-align: center;
 }
 .gallery__links a {
   text-decoration: none;
@@ -736,6 +754,7 @@ img {
 }
 .gallery__link {
   position: relative;
+  padding: 0.2em;
 }
 .gallery__link::before {
   content: "";
@@ -773,10 +792,76 @@ img {
   background-image: linear-gradient(45deg, rgb(197, 197, 24), rgba(255, 251, 0, 0.589));
   height: 100%;
   color: black;
+  padding-bottom: 5em;
 }
 .contact h2 {
   z-index: 1000;
   color: black;
+}
+.contact__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .name, .contact .message, .contact .email {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  text-transform: uppercase;
+}
+.contact label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5em;
+  font-size: 2rem;
+}
+.contact textarea {
+  min-width: 100%;
+  max-width: 100%;
+  margin-bottom: 1em;
+}
+.contact .submit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0.5em;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #FFF7E9;
+  border: none;
+  border-radius: 8px;
+  background-image: linear-gradient(45deg, #5F9DF7, #1746A2);
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+}
+.contact .submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 20vw;
+  height: 20vw;
+  border: 1px rgba(255, 255, 255, 0.452) solid;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.737), rgba(255, 255, 255, 0.31));
+  transform: rotate(20deg);
+  transition: transform 0.3s;
+}
+.contact .submit:hover::before {
+  transform: translateX(400%);
+}
+
+.footer__bottom-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  background-color: #FFF7E9;
+  color: #FF731D;
+  text-transform: uppercase;
 }
 
 @media (min-width: 1021px) and (max-width: 1303px) {
